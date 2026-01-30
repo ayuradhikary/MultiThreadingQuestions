@@ -12,7 +12,7 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        while (!Thread.currentThread().isInterrupted()) {
+        while (true) {
             try {
                 String element = this.blockingQueue.take();
                 System.out.println("Consumed: " + element);
